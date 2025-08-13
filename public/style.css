@@ -1,0 +1,168 @@
+body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      color: #333;
+      font-size: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-size: 38px;
+      margin-top: 0;
+    }
+
+    .instructions {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .message {
+      margin-bottom: 20px;
+      padding: 16px;
+      border-radius: 12px;
+      background-color: #fff3cd;
+      color: #856404;
+      display: none;
+      font-size: 20px;
+    }
+
+    .message.success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .file-label {
+      display: inline-block;
+      padding: 18px 30px;
+      background-color: #e91e63;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-bottom: 25px;
+      font-weight: bold;
+      font-size: 48px;
+      margin-top: 20px;
+    }
+
+    .file-label:hover {
+      background-color: #d81b60;
+    }
+
+    #files {
+      display: none;
+    }
+
+    #preview {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .preview-item {
+      position: relative;
+      background: #fafafa;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .preview-item img,
+    .preview-item video {
+      max-width: 190px;
+      max-height: 190px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .preview-item p {
+      font-size: 16px;
+      margin: 5px 0 0 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .remove-btn {
+      position: absolute;
+      top: 8px;
+      right: 14px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      margin-top: 30px;
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 48px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #1976d2;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 20px;
+      }
+
+      .container {
+        padding: 30px 20px;
+        border-radius: 20px;
+        margin-top: 20px;
+      }
+
+      h2 {
+        font-size: 38px;
+      }
+
+      .file-label {
+        width: 100%;
+        text-align: center;
+        font-size: 48px;
+      }
+
+      .submit-btn {
+        font-size: 48px;
+        padding: 18px;
+      }
+
+      .preview-item {
+        width: 200px;
+      }
+
+      .preview-item img,
+      .preview-item video {
+        max-width: 190px;
+        max-height: 190px;
+      }
+    }

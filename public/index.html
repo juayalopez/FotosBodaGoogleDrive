@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ÁLVARO | ÍNDARA - Sube tus fotos o videos de la boda</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>¡Sube tus fotos o videos de la boda!</h2>
+    <p class="instructions">
+      1. Haz clic en <strong>“Elegir archivos”</strong> para seleccionar imágenes o videos.<br /><br />
+      2. Revisa la vista previa y elimina los que no quieras subir.<br /><br />
+      3. Haz clic en <strong>“Subir archivos”</strong> para enviarlos.
+    </p>
+
+    <div id="message" class="message"></div>
+
+    <label for="files" class="file-label">Elegir archivos</label>
+    <input type="file" id="files" accept="image/*,video/*" multiple required />
+
+    <form id="myForm">
+      <input type="submit" value="Subir archivos" class="submit-btn" />
+    </form>
+
+    <div id="preview"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
