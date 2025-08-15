@@ -44,9 +44,9 @@ h2 {
 }
 
 .file-label {
-  display: inline-block;
+  display: block;
   padding: 18px 30px;
-  background-color: #e91e63;
+  background-color: #2196f3;
   color: white;
   border-radius: 12px;
   cursor: pointer;
@@ -118,7 +118,7 @@ h2 {
   width: 100%;
   padding: 20px;
   margin-top: 30px;
-  background-color: #2196f3;
+  background-color: #e91e63;
   color: white;
   border: none;
   border-radius: 12px;
@@ -159,11 +159,11 @@ h2 {
   color: #333;
 }
 
-#verQRa:hover{
+#verQRa:hover {
   color: red;
 }
 
-#verQRa:active{
+#verQRa:active {
   color: #333;
 }
 
@@ -213,6 +213,24 @@ h2 {
   }
 }
 
+@media (min-width: 481px) {
+  .qr-boda {
+    position: relative;
+    float: right;
+    font-weight: bold;
+  }
+
+  .logo-boda {
+    max-width: 15vw;
+    position: relative;
+    width: 100%;
+  }
+
+  h2 {
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: 480px) {
   body {
     font-size: 20px;
@@ -246,5 +264,19 @@ h2 {
   .preview-item video {
     max-width: 190px;
     max-height: 190px;
+  }
+
+  .qr-boda {
+    position: absolute;
+    top: 39px;
+    right: 10px;
+  }
+
+  .logo-boda {
+    max-width: 15vw;
+    border-radius: 10px;
+    position: absolute;
+    top: 25px;
+    left: 10px;
   }
 }
