@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ÁLVARO | INDARA - Sube tus fotos o videos de la boda</title>
@@ -8,9 +9,19 @@
 </head>
 <body>
   <div class="container">
-    <h2>¡Sube tus fotos o videos de la boda!</h2>
+    <img src="logo.png" alt="Logo" style="max-width: 15vw; border-radius: 10px; position: absolute; top: 25px; left: 10px; font-weight: bold;">
+    <a href="#" id="verQR" style="position: absolute; top: 39px; right: 10px; font-weight: bold;">Compartir</a>
+    
+    <!-- Popup oculto -->
+    <div id="popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 9999; justify-content: center; align-items: center;">
+      <div style="position: relative;">
+        <img src="QR.png" alt="código QR" style="max-width: 90vw; max-height: 90vh; border-radius: 10px;">
+        <button id="cerrarPopup" style="position: absolute; top: -10px; right: -10px; background: white; border: none; border-radius: 50%; padding: 5px 10px; font-weight: bold; cursor: pointer;">✕</button>
+      </div>
+</div>
+    <h2>¡Sube tus fotos o vídeos de la boda!</h2>
     <p class="instructions">
-      1. Haz clic en <strong>“Elegir archivos”</strong> para seleccionar imágenes o vídeos.<br /><br />
+      1. Haz clic en <strong>“Elegir archivos”</strong> para seleccionar fotos o vídeos.<br /><br />
       2. Revisa la vista previa y elimina los que no quieras subir.<br /><br />
       3. Haz clic en <strong>“Subir archivos”</strong> para enviarlos.
     </p>
@@ -21,11 +32,22 @@
     <input type="file" id="files" accept="image/*,video/*" multiple required />
 
     <form id="myForm">
-      <input type="submit" value="Subir archivos" class="submit-btn" />
+      <input type="submit" value="Subir archivos" class="submit-btn" id="btnSubmit" />
     </form>
 
     <div id="preview"></div>
   </div>
   <script src="script.js"></script>
+
+  <div id="uploadOverlay" class="upload-overlay" style="display: none;">
+  <div class="upload-popup">
+    <div class="spinner"></div>
+    <p id="currentFileName" style="font-size:17px;"></p>
+    <div class="progress-container">
+      <div id="progressBar" class="progress-bar"></div>
+    </div>
+  </div>
+</div>
+</div>
 </body>
 </html>
